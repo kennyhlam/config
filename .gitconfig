@@ -1,0 +1,17 @@
+[user]
+	name = Kenny Lam
+	email = khl1392@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = vim
+	excludesfile = *.swp
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	unstage = reset HEAD
+	untrack = rm --cached
+    track = branch --track
+[push]
+	default = simple
+[color]                                                                          
+     ui = auto 
