@@ -23,6 +23,7 @@ source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
 rvm use 2.1.2@rails415 --create --default
 gem install rails -v 4.1.5
+gem install pg
 
 if [ $(whoami) != 'vagrant']; then # a base box, not vm
 	cd $HOME/Downloads
