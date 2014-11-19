@@ -73,7 +73,10 @@ if [ $(whoami) != 'vagrant']; then # a base box, not vm
 	wget https://github.com/jisaacks/GitGutter/archive/master.zip
 	unzip master.zip && mv GitGutter-master ~/.config/sublime-text-2/Packages/GitGutter
 	
-	
+	cd ~/.config/sublime-text-2/Packages/User
+	wget https://raw.githubusercontent.com/kennyhlam/config/master/Preferences.sublime-settings
+	wget https://raw.githubusercontent.com/kennyhlam/config/master/GitGutter.sublime-settings
+	wget https://raw.githubusercontent.com/kennyhlam/config/master/Default%20(Linux).sublime-keymap
 
 	# maybes
 	# Side​Bar​Enhancements, https://github.com/titoBouzout/SideBarEnhancements
