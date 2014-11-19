@@ -42,6 +42,7 @@ if [ $(whoami) != 'vagrant']; then # a base box, not vm
 	sudo mv Sublime\ Text\ 2 /opt/
 	sudo ln -sfn /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
+	# http://www.sitepoint.com/10-essential-sublime-text-plugins-full-stack-developer/
 	mkdir -p ~/.config/sublime-text-2/Installed\ Packages
 	mkdir -p ~/.config/sublime-text-2/Packages
 	cd ~/.config/sublime-text-2/Installed\ Packages
@@ -55,4 +56,27 @@ if [ $(whoami) != 'vagrant']; then # a base box, not vm
 	cd $HOME/Downloads
 	wget https://github.com/miguelgraz/FocusFileOnSidebar/archive/master.zip
 	unzip master.zip && mv FocusFileOnSidebar-master ~/.config/sublime-text-2/Packages/FocusFileOnSidebar
+	# All Autocomplete Sublime Text
+	cd $HOME/Downloads
+	wget https://github.com/alienhard/SublimeAllAutocomplete/archive/master.zip
+	unzip master.zip && mv SublimeAllAutocomplete-master ~/.config/sublime-text-2/Packages/SublimeAllAutocomplete
+	# Sublimetext markdown preview
+	cd $HOME/Downloads
+	wget https://github.com/revolunet/sublimetext-markdown-preview/archive/master.zip
+	unzip master.zip && mv sublimetext-markdown-preview-master ~/.config/sublime-text-2/Packages/sublimetext-markdown-preview
+	# Sublime terminal
+	cd $HOME/Downloads
+	wget https://github.com/wbond/sublime_terminal/archive/master.zip
+	unzip master.zip && mv sublime_terminal-master ~/.config/sublime-text-2/Packages/sublime_terminal
+	# GitGutter
+	cd $HOME/Downloads
+	wget https://github.com/jisaacks/GitGutter/archive/master.zip
+	unzip master.zip && mv GitGutter-master ~/.config/sublime-text-2/Packages/GitGutter
+	
+	
+
+	# maybes
+	# Side​Bar​Enhancements, https://github.com/titoBouzout/SideBarEnhancements
+	# SublimeREPL, https://github.com/wuub/SublimeREPL
+	# DocBlock, https://github.com/spadgos/sublime-jsdocs
 fi
