@@ -10,8 +10,8 @@
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	unstage = reset HEAD
 	untrack = rm --cached
-    track = branch --track
+	track = branch --track
 [push]
 	default = simple
 [color]                                                                          
-     ui = auto 
+	ui = auto 
