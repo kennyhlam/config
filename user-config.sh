@@ -1,17 +1,17 @@
 #!/bin/bash
 
-apt-get update
-apt-get install -y apache2
-apt-get install -y postgresql-9.3
-apt-get install -y git
-apt-get install -y nodejs
-apt-get install -y npm
-apt-get install -y libpq-dev
-apt-get install -y vim
-apt-get install -y nautilus-open-terminal
-add-apt-repository ppa:git-core/ppa
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get install -y apache2
+sudo apt-get install -y postgresql-9.3
+sudo apt-get install -y git
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+sudo apt-get install -y libpq-dev
+sudo apt-get install -y vim
+sudo apt-get install -y nautilus-open-terminal
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get upgrade -y
 
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
@@ -23,16 +23,16 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
 # heroku?
-gem install pg
-gem install faraday
-gem install thin
-gem install sinatra
-gem install jsonschema
+sudo gem install pg
+sudo gem install faraday
+sudo gem install thin
+sudo gem install sinatra
+sudo gem install jsonschema
 rvm use 2.1.2@rails415 --create --default
-gem install rails -v 4.1.5
-gem install devise
+sudo gem install rails -v 4.1.5
+sudo gem install devise
 
-if [ $(whoami) != 'vagrant']; then # a base box, not vm
+if [ $(whoami) != 'vagrant' ]; then # a base box, not vm
 	# Maybe in the future, https://atom.io/
 
 	cd $HOME/Downloads
