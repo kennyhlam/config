@@ -63,6 +63,8 @@ bindkey -M menuselect 'j' down-line-or-history
 bindkey -M menuselect 'k' up-line-or-history
 bindkey -M menuselect 'h' backward-char
 bindkey -M menuselect 'l' forward-char
+bindkey "^R" history-incremental-search-backward
+# bindkey \C-R history-incremental-search-backward
 
 #autoload -U compinit && compinit
 #zstyle ':completion:*' menu select
