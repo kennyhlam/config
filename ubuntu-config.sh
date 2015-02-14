@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -f $(which lsb_release) ]; then
+	exit 0
+fi
+
 sudo apt-get update
 sudo apt-get install -y apache2
 sudo apt-get install -y postgresql-9.3
@@ -9,10 +13,18 @@ sudo apt-get install -y npm
 sudo apt-get install -y libpq-dev
 sudo apt-get install -y vim
 sudo apt-get install -y nautilus-open-terminal
+sudo apt-get install -y curl
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get upgrade -y
 
+# ubuntu only?
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+sudo apt-get remove -y unity-webapps-common
+
+mkdir -p ~/.ssh
+ssh-keygen -t rsa -f ~/.ssh/id_rsa
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.vimrc --output $HOME/.vimrc
