@@ -35,7 +35,6 @@ CASE_SENSITIVE="true"
 plugins=(gitfast gem brew bundler rvm history history-substring-search terminalapp vagrant web-search)
 
 # User configuration
-export PATH="/Users/kennylam/.rvm/gems/ruby-2.1.1@rails415/bin:/Users/kennylam/.rvm/gems/ruby-2.1.1@global/bin:/Users/kennylam/.rvm/rubies/ruby-2.1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kennylam/.rvm/bin:/Users/kennylam/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
