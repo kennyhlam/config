@@ -14,26 +14,31 @@ sudo apt-get install -y libpq-dev
 sudo apt-get install -y vim
 sudo apt-get install -y nautilus-open-terminal
 sudo apt-get install -y curl
+sudo apt-get install -y zsh
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get upgrade -y
+
+mkdir -p ~/.ssh
+ssh-keygen -t rsa -f ~/.ssh/id_rsa
 
 # ubuntu only?
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 sudo apt-get remove -y unity-webapps-common
 
-mkdir -p ~/.ssh
-ssh-keygen -t rsa -f ~/.ssh/id_rsa
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.vimrc --output $HOME/.vimrc
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gemrc --output $HOME/.gemrc
-
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable
 source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
+
+wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh 
+chsh -s /bin/zsh 
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.vimrc --output $HOME/.vimrc
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gemrc --output $HOME/.gemrc
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.zshrc --output $HOME/.zshrc
 # heroku?
 sudo gem install pg
 sudo gem install faraday
