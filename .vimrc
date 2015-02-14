@@ -10,8 +10,26 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces
+set autochdir
 
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
-nnoremap <C-j> <C-f>
-nnoremap <C-k> <C-b> 
+
+nnoremap <C-e> $
+nnoremap <C-a> 0
+" scroll up and down
+" nnoremap <C-k> <C-f>
+" nnoremap <C-l> <C-b> 
+
+" switching panes for vert splits
+nnoremap <C-j> <C-w>h
+nnoremap <C-;> <C-w>l
+" switching tabs
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
+cnoreabbrev reset e!
+cnoreabbrev open e
+cnoreabbrev tab tabe
+cnoreabbrev ls Te
+cnoremap cd lcd 
