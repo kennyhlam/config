@@ -1,3 +1,5 @@
+export PATH=$PATH:/usr/local/go/bin
+
 if [ -z "$(ps aux | grep boot2docker | grep VirtualBox)" ]; then
   boot2docker start
 fi

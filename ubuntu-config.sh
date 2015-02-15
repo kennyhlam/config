@@ -49,6 +49,11 @@ rvm use 2.1.2@rails415 --create --default
 sudo gem install rails -v 4.1.5
 sudo gem install devise
 
+cd $HOME/Downloads
+wget https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
+tar -xvzf go1.4.1.linux-amd64.tar.gz
+sudo mv go /usr/local
+
 if [ $(whoami) != 'vagrant' ]; then # a base box, not vm
 	# Maybe in the future, https://atom.io/
 
