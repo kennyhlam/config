@@ -53,6 +53,10 @@ cd $HOME/Downloads
 wget https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
 tar -xvzf go1.4.1.linux-amd64.tar.gz
 sudo mv go /usr/local
+mkdir $HOME/golang
+mkdir $HOME/golang/bin
+mkdir $HOME/golang/pkg
+mkdir $HOME/golang/src
 
 if [ $(whoami) != 'vagrant' ]; then # a base box, not vm
 	# Maybe in the future, https://atom.io/
