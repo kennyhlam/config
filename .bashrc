@@ -1,4 +1,5 @@
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/development/golang
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 if [ -z "$(ps aux | grep boot2docker | grep VirtualBox)" ]; then
   boot2docker start
