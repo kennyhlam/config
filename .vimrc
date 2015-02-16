@@ -22,8 +22,8 @@ nnoremap <C-a> 0
 " nnoremap <C-l> <C-b> 
 
 " switching panes for vert splits
-nnoremap <C-j> <C-w>h
-nnoremap <C-;> <C-w>l
+nnoremap <C-j> <C-w><C-h>
+nnoremap <C-k> <C-w><C-l>
 " switching tabs
 nnoremap <C-h> gT
 nnoremap <C-l> gt

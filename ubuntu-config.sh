@@ -56,7 +56,7 @@ sudo mv go /usr/local
 mkdir $HOME/golang
 mkdir $HOME/golang/bin
 mkdir $HOME/golang/pkg
-mkdir $HOME/golang/src
+mkdir -p $HOME/golang/src/github.com/kennyhlam
 
 if [ $(whoami) != 'vagrant' ]; then # a base box, not vm
 	# Maybe in the future, https://atom.io/
