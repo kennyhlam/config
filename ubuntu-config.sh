@@ -68,6 +68,7 @@ if [ $(whoami) != 'vagrant' ]; then # a base box, not vm
 	sudo mv Sublime\ Text\ 2 /opt/
 	sudo ln -sfn /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
+    # https://github.com/guillermooo/Vintageous#vintageous
 	# http://www.sitepoint.com/10-essential-sublime-text-plugins-full-stack-developer/
 	mkdir -p ~/.config/sublime-text-2/Installed\ Packages
 	mkdir -p ~/.config/sublime-text-2/Packages

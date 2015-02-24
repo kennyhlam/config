@@ -36,3 +36,6 @@ cnoreabbrev open e
 cnoreabbrev tab tabe
 cnoreabbrev ls Te
 cnoremap cd lcd 
+
+" https://github.com/jistr/vim-nerdtree-tabs
+" https://github.com/scrooloose/nerdtree
