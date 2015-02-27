@@ -1,4 +1,23 @@
 [
-{ "keys": ["ctrl+tab"], "command": "next_view" },
-{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+	{ "keys": ["tab"], "command": "insert", "args": { "characters": "    "},
+		"context": [
+			{ "key": "setting.command_mode", "operator": "equal", "operand": false },
+			{ "key": "setting.is_widget", "operator": "equal", "operand": false }
+		]
+	},
+	{ "keys": ["ctrl+a"], "command": "set_motion", "args": {
+		"motion": "vi_move_to_first_non_white_space_character",
+		"motion_args": {"extend": true },
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
+	},
+	{ "keys": ["ctrl+e"], "command": "set_motion", "args": {
+		"motion": "vi_move_to_hard_eol",
+		"motion_args": {"repeat": 1, "extend": true},
+		"inclusive": true,
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
+	},
 ]
