@@ -7,17 +7,11 @@
 			{ "key": "setting.is_widget", "operator": "equal", "operand": false }
 		]
 	},
-	{ "keys": ["ctrl+a"], "command": "set_motion", "args": {
-		"motion": "vi_move_to_first_non_white_space_character",
-		"motion_args": {"extend": true },
-		"clip_to_line": true },
-		"context": [{"key": "setting.command_mode"}]
-	},
-	{ "keys": ["ctrl+e"], "command": "set_motion", "args": {
-		"motion": "vi_move_to_hard_eol",
-		"motion_args": {"repeat": 1, "extend": true},
-		"inclusive": true,
-		"clip_to_line": true },
-		"context": [{"key": "setting.command_mode"}]
-	},
+	// https://www.sublimetext.com/docs/2/vintage.html
+	// https://github.com/sublimehq/Vintage
+	// http://sublimetext.info/docs/en/customization/key_bindings.html
+	// http://docs.sublimetext.info/en/latest/reference/commands.html
+	// http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/key_bindings.html
+	// http://docs.sublimetext.info/en/latest/reference/key_bindings.html
+	// http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/settings.html
 ]
