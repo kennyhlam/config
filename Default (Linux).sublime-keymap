@@ -6,7 +6,7 @@
 			{ "key": "setting.command_mode", "operator": "equal", "operand": false },
 			{ "key": "setting.is_widget", "operator": "equal", "operand": false }
 		]
-	},
+	}
 	// https://www.sublimetext.com/docs/2/vintage.html
 	// https://github.com/sublimehq/Vintage
 	// http://sublimetext.info/docs/en/customization/key_bindings.html
