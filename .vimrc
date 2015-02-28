@@ -91,14 +91,14 @@ nnoremap <C-a> 0
 " nnoremap <C-l> <C-b> 
 
 " switching panes for vert splits
-nnoremap <C-k> <C-w><C-h>
-nnoremap <C-j> <C-w><C-l>
+" nnoremap <C-k> <C-w><C-h>
+" nnoremap <C-j> <C-w><C-l>
 set splitbelow
 set splitright
 
 " switching tabs
-nnoremap <C-h> gT
-nnoremap <C-l> gt
+" nnoremap <C-h> gT
+" nnoremap <C-l> gt
 
 cnoreabbrev reset e!
 cnoreabbrev open e
