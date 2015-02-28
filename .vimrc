@@ -14,6 +14,9 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+" Plugin 'majutsushi/tagbar'
 call vundle#end()
 filetype plugin indent on
 
@@ -32,9 +35,29 @@ let g:airline#extensions#tabline#enabled = 1
 
 " ----- jistr/vim-nerdtree settings -----
 " Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nnoremap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 1
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" ----- scrooloose/syntastic settings -----
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+augroup mySyntastic
+  au!
+  au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+" ----- majutsushi/tagbar settings -----
+" Open/close tab bar
+" nnoremap <silent> <leader>b :TagbarToggle<CR>
+
+" ----- airblade/vim-gitgutter settings -----
+" Required after having changed the colorscheme
+hi clear SignColumn
+" In vim-airline, only display "hunks" if the diff is non-zero
+let g:airline#extensions#hunks#non_zero_only = 1
 
 " ---- General Settings ----
 set backspace=indent,eol,start
