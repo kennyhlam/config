@@ -1,15 +1,7 @@
 https://github.com/andreafrancia/trash-cli
 
-joe's vimrc
-  1 set tabstop=4                                                                    
-  2 set softtabstop=4                                                                
-  3 set number                                                                       
-  4 set showcmd                                                                      
-  5 filetype indent on                                                               
   6 set wildmenu                                                                     
   7 set showmatch                                                                    
-  8 set incsearch                                                                    
-  9 set hlsearch                                                                     
  10 set foldenable                                                                   
  11 set foldlevelstart=10                                                            
  12 set foldnestmax=10                                                               

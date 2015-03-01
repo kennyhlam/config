@@ -94,13 +94,13 @@ inoremap <C-a> <C-o>0
 nnoremap <C-e> $
 nnoremap <C-a> 0
 
+" ----- Tab Navigation -----
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
-" switching tabs
-" nnoremap <C-h> gT
-" nnoremap <C-l> gt
+nnoremap <silent> <C-r> :nohl<CR><C-l>
 
 " ---- Key Mappings ----
 cnoreabbrev reset e!
