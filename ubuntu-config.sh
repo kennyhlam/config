@@ -32,10 +32,11 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
 
-chsh -s /bin/zsh 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/.oh-my-zsh sh
+chsh -s /bin/zsh 
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.vimrc --output $HOME/.vimrc
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gemrc --output $HOME/.gemrc
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.zshrc --output $HOME/.zshrc
