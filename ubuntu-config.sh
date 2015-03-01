@@ -25,6 +25,9 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa
 # ubuntu only?
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+# http://unix.stackexchange.com/questions/119432/save-custom-keyboard-shortcuts-in-gnome
+# https://wiki.ubuntu.com/Keybindings
+# http://askubuntu.com/questions/26056/where-are-gnome-keyboard-shortcuts-stored
 cd $HOME
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/ubuntu-keybindings --output ubuntu-keybindings
 dconf load /org/gnome/desktop/wm/keybindings/ < ubuntu-keybindings
