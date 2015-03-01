@@ -32,6 +32,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_detect_paste=1
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
+" Collapse buffers to only base filename
+let g:airline_inactive_collapse=1
+let g:airline#extensions#tabline#fnamemod = ':t:.'
 
 " ----- jistr/vim-nerdtree settings -----
 " Open/close NERDTree Tabs with \t
@@ -94,13 +97,20 @@ inoremap <C-a> <C-o>0
 nnoremap <C-e> $
 nnoremap <C-a> 0
 
+" ----- Buffer Navigation -----
+" set hidden
+" nnoremap <C-j> :bp<CR>
+" nnoremap <C-;> :bn<CR>
+
+" ----- Tab Navigation -----
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+
+
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" switching tabs
-" nnoremap <C-h> gT
-" nnoremap <C-l> gt
 
 " ---- Key Mappings ----
 cnoreabbrev reset e!
