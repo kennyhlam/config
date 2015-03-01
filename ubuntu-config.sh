@@ -30,8 +30,12 @@ git clone git@github.com:kennyhlam/config.git
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # setup keyboard shortcuts
-# http://unix.stackexchange.com/questions/119432/save-custom-keyboard-shortcuts-in-gnome, https://wiki.ubuntu.com/Keybindings, http://askubuntu.com/questions/26056/where-are-gnome-keyboard-shortcuts-stored
+## http://unix.stackexchange.com/questions/119432/save-custom-keyboard-shortcuts-in-gnome
+## https://wiki.ubuntu.com/Keybindings
+## http://askubuntu.com/questions/26056/where-are-gnome-keyboard-shortcuts-stored
 dconf load /org/gnome/desktop/wm/keybindings/ < ~/development/config/ubuntu-keybindings
+# setup terminal settings
+ln -sf ~/development/config/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml
 
 # install RVM
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
