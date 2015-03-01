@@ -25,6 +25,10 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa
 # ubuntu only?
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+cd $HOME
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/ubuntu-keybindings --output ubuntu-keybindings
+dconf load /org/gnome/desktop/wm/keybindings/ < ubuntu-keybindings
+rm ubuntu-keybindings
 sudo apt-get remove -y unity-webapps-common
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
@@ -33,6 +37,7 @@ source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/.oh-my-zsh sh
+curl -v https://raw.githubusercontent.com/kennyhlam/config/master/klam.zsh-theme --output $HOME/.oh-my-zsh/themes/klam.zsh-theme
 chsh -s /bin/zsh 
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
 curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
