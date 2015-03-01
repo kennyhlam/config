@@ -40,6 +40,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_detect_paste=1
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
+" Only show filenames for buffer headers
+let g:bufferline_fname_mod = ':t'
+
 
 " ----- jistr/vim-nerdtree settings -----
 " Open/close NERDTree Tabs with \t
