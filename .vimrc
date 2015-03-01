@@ -10,6 +10,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'carlson-erik/wolfpack'
+"   alternatives:
+"     http://cocopon.me/app/vim-color-gallery/
+"     http://vimcolors.com/
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -25,16 +29,19 @@ filetype plugin indent on
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
+" Set colorscheme
+set t_Co=256
+colorscheme wolfpack
 " Fancy arrows requires a patched font
 "   https://github.com/abertsch/Menlo-for-Powerline
+"   http://powerline.readthedocs.org/en/latest/installation/linux.html
 let g:airline_powerline_fonts = 1
 " Show PASTE if in paste mode
 let g:airline_detect_paste=1
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
-" Collapse buffers to only base filename
-let g:airline_inactive_collapse=1
-let g:airline#extensions#tabline#fnamemod = ':t:.'
+" Only show filenames for buffer headers
+let g:bufferline_fname_mod = ':t'
 
 " ----- jistr/vim-nerdtree settings -----
 " Open/close NERDTree Tabs with \t
@@ -69,6 +76,10 @@ set ruler
 set showcmd
 set incsearch
 set hlsearch
+set cursorline
+set linebreak
+set wrap
+set scrolloff=3
 
 syntax on
 set mouse=a
@@ -97,20 +108,15 @@ inoremap <C-a> <C-o>0
 nnoremap <C-e> $
 nnoremap <C-a> 0
 
-" ----- Buffer Navigation -----
-" set hidden
-" nnoremap <C-j> :bp<CR>
-" nnoremap <C-;> :bn<CR>
-
 " ----- Tab Navigation -----
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
+<<<<<<< HEAD
 
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
+nnoremap <silent> <C-r> :nohl<CR><C-l>
 
 " ---- Key Mappings ----
 cnoreabbrev reset e!

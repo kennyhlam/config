@@ -69,3 +69,4 @@ bindkey "^R" history-incremental-search-backward
 #autoload -U compinit && compinit
 #zstyle ':completion:*' menu select
 
+alias ll="ls -alF"
