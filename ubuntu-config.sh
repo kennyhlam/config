@@ -24,11 +24,14 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 
+# get relevant git config repo
+mkdir -p ~/development
+git clone git@github.com:kennyhlam/config.git
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # setup keyboard shortcuts
 # http://unix.stackexchange.com/questions/119432/save-custom-keyboard-shortcuts-in-gnome, https://wiki.ubuntu.com/Keybindings, http://askubuntu.com/questions/26056/where-are-gnome-keyboard-shortcuts-stored
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/ubuntu-keybindings --output ~/ubuntu-keybindings
-dconf load /org/gnome/desktop/wm/keybindings/ < ~/ubuntu-keybindings
-rm ~/ubuntu-keybindings
+dconf load /org/gnome/desktop/wm/keybindings/ < ~/development/config/ubuntu-keybindings
 
 # install RVM
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
@@ -36,16 +39,15 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 source $HOME/.rvm/scripts/rvm
 rvm install 2.1.2
 
-# setup config files
+# setup configs and associated files 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH=~/.oh-my-zsh sh
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/klam.zsh-theme --output $HOME/.oh-my-zsh/themes/klam.zsh-theme
+ln -sf ~/development/config/klam.zsh-theme ~/.oh-my-zsh/themes/klam.zsh-theme
 chsh -s /bin/zsh 
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gitconfig --output $HOME/.gitconfig
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.bashrc --output $HOME/.bashrc
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.vimrc --output $HOME/.vimrc
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.gemrc --output $HOME/.gemrc
-curl -v https://raw.githubusercontent.com/kennyhlam/config/master/.zshrc --output $HOME/.zshrc
+ln -sf ~/development/config/.gitconfig ~/.gitconfig
+# ln -sf ~/development/config/.bashrc ~/.bashrc
+ln -sf ~/development/config/.vimrc ~/.vimrc
+ln -sf ~/development/config/.gemrc ~/.gemrc
+ln -sf ~/development/config/.zshrc ~/.zshrc
 
 # setup ruby
 rvm use 2.1.2@rails415 --create --default
@@ -62,7 +64,7 @@ cd ~/Downloads
 wget https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
 tar -xvzf go1.4.1.linux-amd64.tar.gz
 sudo mv go /usr/local
-mkdir ~/golang
-mkdir ~/golang/bin
-mkdir ~/golang/pkg
-mkdir -p ~/golang/src/github.com/kennyhlam
+mkdir ~/development/golang
+mkdir ~/development/golang/bin
+mkdir ~/development/golang/pkg
+mkdir -p ~/development/golang/src/github.com/kennyhlam
