@@ -10,6 +10,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'carlson-erik/wolfpack'
+"   alternatives:
+"     http://cocopon.me/app/vim-color-gallery/
+"     http://vimcolors.com/
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -25,8 +29,12 @@ filetype plugin indent on
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
+" Set colorscheme
+set t_Co=256
+colorscheme wolfpack
 " Fancy arrows requires a patched font
 "   https://github.com/abertsch/Menlo-for-Powerline
+"   http://powerline.readthedocs.org/en/latest/installation/linux.html
 let g:airline_powerline_fonts = 1
 " Show PASTE if in paste mode
 let g:airline_detect_paste=1
