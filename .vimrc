@@ -112,8 +112,6 @@ nnoremap <C-a> 0
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
-<<<<<<< HEAD
-
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
 nnoremap <silent> <C-r> :nohl<CR><C-l>
