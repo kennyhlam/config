@@ -79,6 +79,7 @@ set hlsearch
 set cursorline
 set linebreak
 set wrap
+set hidden
 set scrolloff=3
 
 syntax on
@@ -123,7 +124,6 @@ nnoremap <silent> <C-r> :nohl<CR><C-l>
 " Change scrolling behavior
 nnoremap <C-f> <C-d>
 nnoremap <C-b> <C-u>
-inoremap <C-s> <esc>:w<CR>
 
 " ---- Changed Mappings ----
 cnoreabbrev reset e!
