@@ -102,7 +102,7 @@ set splitbelow
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-j> <C-w><C-j>
 
-" ----- General Navigation ----
+" ---- General Navigation ----
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 nnoremap <C-e> $
@@ -112,11 +112,20 @@ nnoremap <C-a> 0
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
+" ----- Buffer Navigation -----
+nnoremap bb :bprev<CR>
+
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
 nnoremap <silent> <C-r> :nohl<CR><C-l>
 
-" ---- Key Mappings ----
+" ---- Utility Mappings ----
+" Change scrolling behavior
+nnoremap <C-f> <C-d>
+nnoremap <C-b> <C-u>
+inoremap <C-s> <esc>:w<CR>
+
+" ---- Changed Mappings ----
 cnoreabbrev reset e!
 cnoreabbrev open e
 cnoreabbrev tab tabe
