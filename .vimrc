@@ -114,7 +114,7 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 
 " ----- Buffer Navigation -----
-nnoremap bb :bprev<CR>
+nnoremap <Space><Space> :bprev<CR>
 
 " ---- Searching ----
 highlight Search ctermbg=DarkCyan
