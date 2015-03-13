@@ -70,3 +70,7 @@ bindkey "^R" history-incremental-search-backward
 #zstyle ':completion:*' menu select
 
 alias ll="ls -alF"
+
+export GOPATH=$HOME/development/golang
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
