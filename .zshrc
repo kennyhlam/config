@@ -71,6 +71,8 @@ bindkey "^R" history-incremental-search-backward
 
 alias ll="ls -alF"
 
-export GOPATH=$HOME/development/golang
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+if [ -d "/usr/local/go/bin" ] ; then
+    export PATH=$PATH:/usr/local/go/bin
+    
+fi
 

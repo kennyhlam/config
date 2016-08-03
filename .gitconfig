@@ -2,7 +2,7 @@
 	name = Kenny Lam
 	email = khl1392@gmail.com
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	editor = vim
 	excludesfile = *.swp
