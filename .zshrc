@@ -76,3 +76,6 @@ if [ -d "/usr/local/go/bin" ] ; then
     
 fi
 
+export GOPATH=/vagrant/gopath
+export PATH=/vagrant/gopath/bin:$PATH
+
