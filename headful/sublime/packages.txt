@@ -7,3 +7,4 @@ FocusFileOnSideBar - https://github.com/miguelgraz/focusfileonsidebar
 GitGutter - https://packagecontrol.io/packages/GitGutter
 Sublime Tutor - https://packagecontrol.io/packages/Sublime%20Tutor
 
+All Hallow's Eve
