@@ -3,5 +3,7 @@ Package Control - https://packagecontrol.io/installation
 Sidebar Enhancements - https://packagecontrol.io/packages/SideBarEnhancements
 SyncedSideBar - https://packagecontrol.io/packages/SyncedSideBar
 Alignment - https://packagecontrol.io/packages/Alignment
+FocusFileOnSideBar - https://github.com/miguelgraz/focusfileonsidebar
+GitGutter - https://packagecontrol.io/packages/GitGutter
 Sublime Tutor - https://packagecontrol.io/packages/Sublime%20Tutor
 
