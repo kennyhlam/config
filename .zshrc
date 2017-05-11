@@ -76,7 +76,8 @@ if [ -d "/usr/local/go/bin" ] ; then
     
 fi
 
-export GOPATH=/vagrant/gopath
-export PATH=/vagrant/gopath/bin:$PATH
+set -o vi
+#export GOPATH=/vagrant/gopath
+#export PATH=/vagrant/gopath/bin:$PATH
 #export PATH=/home/vagrant/anaconda4.1.1/bin:$PATH
 
