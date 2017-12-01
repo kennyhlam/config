@@ -81,3 +81,7 @@ set -o vi
 #export PATH=/vagrant/gopath/bin:$PATH
 #export PATH=/home/vagrant/anaconda4.1.1/bin:$PATH
 
+export PATH=/usr/local/cuda-9.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64/:$LD_LIBRARY_PATH
+
+source ~/mypy3/bin/activate
