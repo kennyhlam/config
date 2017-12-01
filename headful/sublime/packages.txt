@@ -1,11 +1,20 @@
 Sublime Text 3
+===Packages===
 Package Control - https://packagecontrol.io/installation
 Sidebar Enhancements - https://packagecontrol.io/packages/SideBarEnhancements
 SyncedSideBar - https://packagecontrol.io/packages/SyncedSideBar
 Alignment - https://packagecontrol.io/packages/Alignment
 FocusFileOnSideBar - https://github.com/miguelgraz/focusfileonsidebar
 GitGutter - https://packagecontrol.io/packages/GitGutter
-Sublime Tutor - https://packagecontrol.io/packages/Sublime%20Tutor
-Markdown Preview
+Markdown Preview - 
+Colorsublime - 
 
-All Hallow's Eve
+===Themes===
+https://scotch.io/bar-talk/best-sublime-text-3-themes-of-2015-and-2016
+All Hallow's Eve - https://colorsublime.github.io/themes/All%20Hallows%20Eve/
+material theme
+
+===Random===
+Sublime Tutor - https://packagecontrol.io/packages/Sublime%20Tutor
+https://scotch.io/bar-talk/the-complete-visual-guide-to-sublime-text-3-themes-color-schemes-and-cool-features
+

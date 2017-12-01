@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# remove amazon cruft
-sudo apt-get remove -y unity-webapps-common
+# remove amazon cruft, https://www.lifewire.com/remove-amazon-application-from-ubuntu-4134329
+# sudo apt-get remove -y unity-webapps-common
+
 
 # setup workspaces, ubuntu only?
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2

@@ -23,3 +23,10 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 sudo apt-get install -y tree
 # install postgres, redis, etc
+
+
+# install CUDA
+# https://askubuntu.com/questions/799184/how-can-i-install-cuda-on-ubuntu-16-04
+
+# install CuDNN
+# https://askubuntu.com/questions/767269/how-can-i-install-cudnn-on-ubuntu-16-04
