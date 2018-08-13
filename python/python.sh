@@ -2,12 +2,12 @@
 
 sudo apt install -y python3-dev
 sudo apt install -y python3-pip
-pip3 install virtualenv
-pip3 install --upgrade pip
-virtualenv -p python3 ~/mypy3
+/usr/bin/python3 -m pip install virtualenv
+/usr/bin/python3 -m virtualenv -p python3 ~/mypy3
+source ~/mypy3/bin/activate
+pip3 install --upgrade pip # uses local installation instead of system pip3
 echo "\nsource ~/mypy3/bin/activate" >> ~/.bashrc
 echo "\nsource ~/mypy3/bin/activate" >> ~/.zshrc
-source ~/mypy3/bin/activate
 
 sudo apt install -y dkms
 # install CUDA
