@@ -86,3 +86,5 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
 
 source ~/mypy3/bin/activate
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
