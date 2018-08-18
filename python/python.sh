@@ -10,6 +10,8 @@ echo "\nsource ~/mypy3/bin/activate" >> ~/.bashrc
 echo "\nsource ~/mypy3/bin/activate" >> ~/.zshrc
 
 sudo apt install -y dkms
+# install nvidia display drivers
+# http://www.linuxandubuntu.com/home/how-to-install-latest-nvidia-drivers-in-linux
 # install CUDA
 # https://askubuntu.com/questions/799184/how-can-i-install-cuda-on-ubuntu-16-04
 # uninstall CUDA

@@ -70,6 +70,7 @@ bindkey "^R" history-incremental-search-backward
 #zstyle ':completion:*' menu select
 
 alias ll="ls -alF"
+alias audiocontrol="pavucontrol"
 
 if [ -d "/usr/local/go/bin" ] ; then
     export PATH=$PATH:/usr/local/go/bin
