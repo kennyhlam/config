@@ -9,16 +9,20 @@
 # ssh-add ~/.ssh/id_rsa
 # ssh -T git@github.com
 
-ln -sf $(readlink -f .gitconfig) ~/.gitconfig
-ln -sf $(readlink -f .vimrc) ~/.vimrc
+# Use cp everywhere to avoid symbolic links
+cp $(readlink -f gitconfig) ~/.gitconfig
+cp $(readlink -f gitignore) ~/.gitignore
+cp $(readlink -f .vimrc) ~/.vimrc
 
+# Handle zsh
 sudo apt install -y zsh
 chsh -s `which zsh`
-ln -sf $(readlink -f .zshrc) ~/.zshrc
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
 cp klam.zsh-theme ~/.oh-my-zsh/themes/
+cp $(readlink -f zshrc) ~/.zshrc
+
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp zshrc ~/.zshrc
 # :PluginInstall
 
 sudo apt install -y tree
