@@ -32,7 +32,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast gem brew bundler rvm history history-substring-search terminalapp vagrant web-search)
+plugins=(gitfast gem brew bundler rvm history history-substring-search vagrant web-search)
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
