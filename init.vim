@@ -19,13 +19,19 @@ call plug#begin()
  Plug 'folke/tokyonight.nvim'
  Plug 'nvim-tree/nvim-web-devicons' " optional
  Plug 'nvim-tree/nvim-tree.lua'
+ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 call plug#end()
 
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
-nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <C-e> :NvimTreeToggle<CR>
+nnoremap <C-p> :LeaderfFile<CR>
 
 colorscheme tokyonight-storm
+
+set number
+
+let g:Lf_WindowPosition = 'popup'
 
 lua <<EOF
   -- disable netrw at the very start of your init.lua
@@ -51,13 +57,14 @@ lua <<EOF
     },
     update_focused_file = {
       enable = true,
-      update_root = true,
+      -- update_root = true,
     },
   })
 
 
 
   -- open the tree...but fuck, it always focuses
+  -- https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
   -- require("nvim-tree.api").tree.toggle({focus = false, update_root = true, })
   -- local win = vim.api.nvim_get_current_win()
   -- local buf = vim.api.nvim_create_buf(true, true)
