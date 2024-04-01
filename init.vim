@@ -29,7 +29,19 @@ nnoremap <C-p> :LeaderfFile<CR>
 
 colorscheme tokyonight-storm
 
-set number
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching 
+set tabstop=4               " number of columns occupied by a tab 
+set hlsearch                " highlight search 
+set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set expandtab               " converts tabs to white space
+set shiftwidth=4            " width for autoindents
+set autoindent              " indent a new line the same amount as the line just typed
+set number                  " add line numbers
+filetype plugin indent on   " allow auto-indenting depending on file type
+syntax on                   " syntax highlighting
+filetype plugin on
+
 
 let g:Lf_WindowPosition = 'popup'
 
