@@ -3,10 +3,10 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # This is just "clean", but instead uses a * for dirty in git
-ZSH_THEME="klam"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -32,7 +32,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast gem brew bundler rvm history history-substring-search vagrant web-search)
+plugins=(gitfast gem brew history history-substring-search web-search)
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -65,26 +65,22 @@ bindkey -M menuselect 'h' backward-char
 bindkey -M menuselect 'l' forward-char
 bindkey "^R" history-incremental-search-backward
 # bindkey \C-R history-incremental-search-backward
+bindkey "[D" backward-word
+bindkey "[C" forward-word
 
 #autoload -U compinit && compinit
 #zstyle ':completion:*' menu select
 
 alias ll="ls -alF"
-alias audiocontrol="pavucontrol"
+# alias audiocontrol="pavucontrol"
 
 if [ -d "/usr/local/go/bin" ] ; then
     export PATH=$PATH:/usr/local/go/bin
     
 fi
 
-set -o vi
-#export GOPATH=/vagrant/gopath
-#export PATH=/vagrant/gopath/bin:$PATH
-#export PATH=/home/vagrant/anaconda4.1.1/bin:$PATH
+# set -o vi
+# 
+# export PATH=/usr/local/cuda/bin:$PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
 
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
-
-# source ~/mypy3/bin/activate
-# source /usr/local/share/chruby/chruby.sh
-# source /usr/local/share/chruby/auto.sh
