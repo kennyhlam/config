@@ -56,7 +56,7 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-bindkey -v
+# bindkey -v
 # zsh/complist
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -M menuselect 'j' down-line-or-history
@@ -65,8 +65,8 @@ bindkey -M menuselect 'h' backward-char
 bindkey -M menuselect 'l' forward-char
 bindkey "^R" history-incremental-search-backward
 # bindkey \C-R history-incremental-search-backward
-bindkey "[D" backward-word
-bindkey "[C" forward-word
+# bindkey "[D" backward-word
+# bindkey "[C" forward-word
 
 #autoload -U compinit && compinit
 #zstyle ':completion:*' menu select
