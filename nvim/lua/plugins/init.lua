@@ -12,14 +12,31 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       "lua-language-server",
+  --       "html-lsp",
+  --       "prettier",
+  --       "ccls",
+  --       "rust"
+  --     },
+  --   },
   -- },
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+  			"vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "cpp",
+        "python",
+        "rust",
+  		},
+  	},
+  },
 }
