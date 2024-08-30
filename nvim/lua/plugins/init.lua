@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -25,10 +25,10 @@ return {
   --   },
   -- },
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
         "lua",
         "vimdoc",
         "html",
@@ -36,7 +36,16 @@ return {
         "cpp",
         "python",
         "rust",
-  		},
-  	},
+      },
+    },
+  },
+  -- nvim-surround
+  {
+    "kylechui/nvim-surround",
+    -- version = "å*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {}
+    end,
   },
 }
