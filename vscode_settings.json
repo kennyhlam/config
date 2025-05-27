@@ -1,5 +1,9 @@
 {
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 30000,
-    "files.autoSaveWorkspaceFilesOnly": true
+    "files.autoSaveWorkspaceFilesOnly": true,
+    //  To improve performance,
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    }
 }
